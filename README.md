@@ -1,112 +1,231 @@
-# Supply chain & data auditing
 
-This repository containts an Ethereum DApp that demonstrates a Supply Chain flow between a Seller and Buyer. The user story is similar to any commonly used supply chain process. A Seller can add items to the inventory system stored in the blockchain. A Buyer can purchase such items from the inventory system. Additionally a Seller can mark an item as Shipped, and similarly a Buyer can mark an item as Received.
+```sh
+UML Diagrams are provided in project-6/UML Diagrams folder
+Truffle v5.5.30 (core: 5.5.30)
+Solidity v0.5.16 (solc-js)
+Node v14.19.2
+Web3.js v1.7.4
+Contract Adress: 0x68402f698a9533C933725c1754f48022c6845bed
+Whole migrations log: 
 
-The DApp User Interface when running should look like...
-
-![truffle test](images/ftc_product_overview.png)
-
-![truffle test](images/ftc_farm_details.png)
-
-![truffle test](images/ftc_product_details.png)
-
-![truffle test](images/ftc_transaction_history.png)
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
 
 
-## Getting Started
+Migrations dry-run (simulation)
+===============================
+> Network name:    'goerli-fork'
+> Network id:      5
+> Block gas limit: 30000000 (0x1c9c380)
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-### Prerequisites
+1_initial_migration.js
+======================
 
-Please make sure you've already installed ganache-cli, Truffle and enabled MetaMask extension in your browser.
+   Deploying 'Migrations'
+   ----------------------
+   > block number:        7775228
+   > block timestamp:     1665858698
+   > account:             0x68402f698a9533C933725c1754f48022c6845bed
+   > balance:             0.09725912
+   > gas used:            274088 (0x42ea8)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00274088 ETH
 
+   -------------------------------------
+   > Total cost:          0.00274088 ETH
+
+
+2_deploy_contracts.js
+=====================
+
+   Deploying 'FarmerRole'
+   ----------------------
+   > block number:        7775230
+   > block timestamp:     1665858701
+   > account:             0x68402f698a9533C933725c1754f48022c6845bed
+   > balance:             0.09349349
+   > gas used:            330628 (0x50b84)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00330628 ETH
+
+
+   Deploying 'DistributorRole'
+   ---------------------------
+   > block number:        7775231
+   > block timestamp:     1665858703
+   > account:             0x68402f698a9533C933725c1754f48022c6845bed
+   > balance:             0.09018709
+   > gas used:            330640 (0x50b90)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.0033064 ETH
+
+
+   Deploying 'RetailerRole'
+   ------------------------
+   > block number:        7775232
+   > block timestamp:     1665858705
+   > account:             0x68402f698a9533C933725c1754f48022c6845bed
+   > balance:             0.08688069
+   > gas used:            330640 (0x50b90)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.0033064 ETH
+
+
+   Deploying 'ConsumerRole'
+   ------------------------
+   > block number:        7775233
+   > block timestamp:     1665858707
+   > account:             0x68402f698a9533C933725c1754f48022c6845bed
+   > balance:             0.08357429
+   > gas used:            330640 (0x50b90)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.0033064 ETH
+
+
+   Deploying 'SupplyChain'
+   -----------------------
+   > block number:        7775234
+   > block timestamp:     1665858713
+   > account:             0x68402f698a9533C933725c1754f48022c6845bed
+   > balance:             0.05776869
+   > gas used:            2580560 (0x276050)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.0258056 ETH
+
+   -------------------------------------
+   > Total cost:          0.03903108 ETH
+
+Summary
+=======
+> Total deployments:   6
+> Final cost:          0.04177196 ETH
+
+
+
+
+Starting migrations...
+======================
+> Network name:    'goerli'
+> Network id:      5
+> Block gas limit: 30000000 (0x1c9c380)
+
+
+1_initial_migration.js
+======================
+
+   Deploying 'Migrations'
+   ----------------------
+   > transaction hash:    0x339034784c7d5452e8b7b0b46df5f7ad1ea37aa83b5c9356525cd102cefceeb7
+   > Blocks: 0            Seconds: 12
+   > contract address:    0x2006f92709ecebE65cEeC100b1A25Bc1b7527BdC
+   > block number:        7775234
+   > block timestamp:     1665858732
+   > account:             0x68402f698a9533C933725c1754f48022c6845bed
+   > balance:             0.09725912
+   > gas used:            274088 (0x42ea8)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00274088 ETH
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.00274088 ETH
+
+
+2_deploy_contracts.js
+=====================
+
+   Deploying 'FarmerRole'
+   ----------------------
+   > transaction hash:    0xd8c142d825a5ce830b56adacedc555032efc1f34208e35cb2ed65df2dd478ba1
+   > Blocks: 1            Seconds: 20
+   > contract address:    0x038e57e9Ced1f0bEd9664beA79aA96bD99B1bc82
+   > block number:        7775236
+   > block timestamp:     1665858780
+   > account:             0x68402f698a9533C933725c1754f48022c6845bed
+   > balance:             0.09349349
+   > gas used:            330628 (0x50b84)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00330628 ETH
+
+
+   Deploying 'DistributorRole'
+   ---------------------------
+   > transaction hash:    0xc5211d7ff2ce97577913aacedea2f1cb4b8124bf93eb753ece676aa474124530
+   > Blocks: 2            Seconds: 17
+   > contract address:    0xae8Fc4FBD620aFd1a917EB5593Ab332154A72e37
+   > block number:        7775238
+   > block timestamp:     1665858804
+   > account:             0x68402f698a9533C933725c1754f48022c6845bed
+   > balance:             0.09018709
+   > gas used:            330640 (0x50b90)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.0033064 ETH
+
+
+   Deploying 'RetailerRole'
+   ------------------------
+   > transaction hash:    0x69d01adb9c273121ef0338e0ce554523ccc01dc31c1b7124c0c82f801c122f6a
+   > Blocks: 1            Seconds: 17
+   > contract address:    0x459c90617727E44Ee4982A5A899ce5d8Cf905CAf
+   > block number:        7775240
+   > block timestamp:     1665858828
+   > account:             0x68402f698a9533C933725c1754f48022c6845bed
+   > balance:             0.08688069
+   > gas used:            330640 (0x50b90)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.0033064 ETH
+
+
+   Deploying 'ConsumerRole'
+   ------------------------
+   > transaction hash:    0x79544e7dd635b760f14a6f8e2aaeba3c8ef93f253ce153e003a6116318a00052
+   > Blocks: 2            Seconds: 17
+   > contract address:    0xF08a9E02cfb6356D1BCeCF314137DC8eB1B5C542
+   > block number:        7775242
+   > block timestamp:     1665858852
+   > account:             0x68402f698a9533C933725c1754f48022c6845bed
+   > balance:             0.08357429
+   > gas used:            330640 (0x50b90)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.0033064 ETH
+
+
+   Deploying 'SupplyChain'
+   -----------------------
+   > transaction hash:    0xff0beb62389f1421311576ecc48f707e726318c62e6bb9e1f53a154a9113decb
+   > Blocks: 1            Seconds: 17
+   > contract address:    0xEAf4Bf83d1b313eBCd28bd7F1CaD1c584080CAa0
+   > block number:        7775244
+   > block timestamp:     1665858876
+   > account:             0x68402f698a9533C933725c1754f48022c6845bed
+   > balance:             0.05776869
+   > gas used:            2580560 (0x276050)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.0258056 ETH
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.03903108 ETH
+
+Summary
+=======
+> Total deployments:   6
+> Final cost:          0.04177196 ETH
 ```
-Give examples (to be clarified)
-```
 
-### Installing
-
-> The starter code is written for **Solidity v0.4.24**. At the time of writing, the current Truffle v5 comes with Solidity v0.5 that requires function *mutability* and *visibility* to be specified (please refer to Solidity [documentation](https://docs.soliditylang.org/en/v0.5.0/050-breaking-changes.html) for more details). To use this starter code, please run `npm i -g truffle@4.1.14` to install Truffle v4 with Solidity v0.4.24. 
-
-A step by step series of examples that tell you have to get a development env running
-
-Clone this repository:
-
-```
-git clone https://github.com/udacity/nd1309/tree/master/course-5/project-6
-```
-
-Change directory to ```project-6``` folder and install all requisite npm packages (as listed in ```package.json```):
-
-```
-cd project-6
-npm install
-```
-
-Launch Ganache:
-
-```
-ganache-cli -m "spirit supply whale amount human item harsh scare congress discover talent hamster"
-```
-
-Your terminal should look something like this:
-
-![truffle test](images/ganache-cli.png)
-
-In a separate terminal window, Compile smart contracts:
-
-```
-truffle compile
-```
-
-Your terminal should look something like this:
-
-![truffle test](images/truffle_compile.png)
-
-This will create the smart contract artifacts in folder ```build\contracts```.
-
-Migrate smart contracts to the locally running blockchain, ganache-cli:
-
-```
-truffle migrate
-```
-
-Your terminal should look something like this:
-
-![truffle test](images/truffle_migrate.png)
-
-Test smart contracts:
-
-```
-truffle test
-```
-
-All 10 tests should pass.
-
-![truffle test](images/truffle_test.png)
-
-In a separate terminal window, launch the DApp:
-
-```
-npm run dev
-```
-
-## Built With
-
-* [Ethereum](https://www.ethereum.org/) - Ethereum is a decentralized platform that runs smart contracts
-* [IPFS](https://ipfs.io/) - IPFS is the Distributed Web | A peer-to-peer hypermedia protocol
-to make the web faster, safer, and more open.
-* [Truffle Framework](http://truffleframework.com/) - Truffle is the most popular development framework for Ethereum with a mission to make your life a whole lot easier.
-
-
-## Authors
-
-See also the list of [contributors](https://github.com/your/project/contributors.md) who participated in this project.
-
-## Acknowledgments
-
-* Solidity
-* Ganache-cli
-* Truffle
-* IPFS
