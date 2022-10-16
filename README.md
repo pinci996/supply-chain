@@ -1,5 +1,8 @@
 
 ```sh
+HOW TO TEST: 
+Run truffle develop from  project-6 folder and after that run truffle test to get tests from TestSupplychain.js file
+
 UML Diagrams are provided in project-6/UML Diagrams folder
 Truffle v5.5.30 (core: 5.5.30)
 Solidity v0.5.16 (solc-js)
